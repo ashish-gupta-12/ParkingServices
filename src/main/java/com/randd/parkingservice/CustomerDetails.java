@@ -3,11 +3,11 @@ package com.randd.parkingservice;
 public class CustomerDetails {
 	
 	String ownerName, carNo, time, token;
-	Long phoneNo;
+	String phoneNo;
 	int floor, section, compartment;
 	
 	
-	public CustomerDetails(String ownerName, String carNo, String time, long phoneNo) {
+	public CustomerDetails(String ownerName, String carNo, String time, String phoneNo) {
 		super();
 		this.ownerName = ownerName;
 		this.carNo = carNo;
@@ -19,7 +19,7 @@ public class CustomerDetails {
 		return time;
 	}
 	
-	public Long getPhoneNo() {
+	public String getPhoneNo() {
 		return phoneNo;
 	}
 

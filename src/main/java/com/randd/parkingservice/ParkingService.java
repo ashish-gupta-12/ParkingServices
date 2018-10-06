@@ -33,7 +33,7 @@ public class ParkingService {
 		return parkingMap;
 	}
 	
-	public void remoceCar(String token) {
+	public void removeCar(String token) {
 		
 		int floor, section, compartment;
 		String[] s = token.split(":");
@@ -94,22 +94,22 @@ public class ParkingService {
 	public static void main(String[] args)
 	{
 		ParkingService p = new ParkingService();
-		CustomerDetails c1 = new CustomerDetails("Ranjana", "1321gkjsd", "10:10", 6548654L);
+		CustomerDetails c1 = new CustomerDetails("Amit", "DL1412", "09:45", "9434381624");
 		p.addCar(c1);
-		CustomerDetails c2 = new CustomerDetails("Nitin", "1321gkjsd", "11:11", 6548654L);
+		CustomerDetails c2 = new CustomerDetails("Akash", "DL3210", "10:25", "9437385614");
 		p.addCar(c2);
-		CustomerDetails c3 = new CustomerDetails("Yashaswini", "1321gkjsd", "10:10", 6548654L);
+		CustomerDetails c3 = new CustomerDetails("Rohan", "DL7843", "11:45", "8734181624");
 		p.addCar(c3);
-		CustomerDetails c4 = new CustomerDetails("Ashish", "1321gkjsd", "10:10", 6548654L);
+		CustomerDetails c4 = new CustomerDetails("Ashish", "DL1210", "12:10", "6562741245");
 		p.addCar(c4);
-		CustomerDetails c5 = new CustomerDetails("Bindu", "1321gkjsd", "10:10", 6548654L);
+		CustomerDetails c5 = new CustomerDetails("Prem", "DL8008", "14:05", "6434321424");
 		p.addCar(c5);
 		System.out.println("5 Cars added\n"+p.retrieveCars());
 		
-		p.remoceCar(c2.getToken());
-		System.out.println("Car 2 (toekn = 1:1:2) removed\n"+p.retrieveCars());
+		p.removeCar(c2.getToken());
+		System.out.println("Car 2 (token = 1:1:2) removed\n"+p.retrieveCars());
 		
-		CustomerDetails c6 = new CustomerDetails("Pragnya", "1321gkjsd", "10:10", 6548654L);
+		CustomerDetails c6 = new CustomerDetails("Pragnya", "BL4524", "17:10", "8487656432");
 		p.addCar(c6);
 		System.out.println("Car 6 added (it goes to token 1:1:2)\n"+p.retrieveCars());
 	}
